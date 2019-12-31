@@ -1,0 +1,95 @@
+<mat-toolbar class="home-toolbar">
+
+  <div>User Management</div>
+
+  <mat-icon (click)="drawer.toggle() && open()" *ngIf="toggle"><img
+      src="../../../assets/IMAGES/navigate_next-24px.svg"></mat-icon>
+  <mat-icon (click)="drawer.toggle()&& open()" *ngIf="!toggle"><img
+      src="../../../assets/IMAGES/navigate_before-24px.svg"></mat-icon>
+
+  <div class="spacer">
+    <mat-icon> <img class="spacer" src="../../../assets/IMAGES/daina.jpeg"></mat-icon>
+    <p style="margin-left: 13px;">shweta</p>
+  </div>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened>
+    <div class="sidenav-content">
+      <div>
+        <mat-icon><img src="../../../assets/IMAGES/dashboard.svg"></mat-icon>
+        <p>Dashboard</p>
+        <button mat-button>UPDATED</button>
+      </div>
+      <div (click)="webpage()">
+        <mat-icon><img src="../../../assets/IMAGES/webpages.svg"></mat-icon>
+        <p>Webpages</p>
+        <mat-icon style="margin-left: 20px;"><img src="../../../assets/IMAGES/navigate_before-24px.svg"
+            style="color: lightgray;"></mat-icon>
+      </div>
+      <div *ngIf="extendWebpage" class="extend">
+
+        <div>Webpages</div>
+        <div>Webpages</div>
+        <div>Webpages</div>
+        <div>Webpages</div>
+
+      </div>
+
+      <div (click)="user()">
+        <mat-icon><img src="../../../assets/IMAGES/user.svg"></mat-icon>
+        <p>User</p>
+        <mat-icon style="margin-left: 20px;"><img src="../../../assets/IMAGES/navigate_before-24px.svg"
+            style="color: lightgray;"></mat-icon>
+      </div>
+      <div *ngIf="extendUsers" class="extend">
+
+        <div>User</div>
+        <div>User</div>
+        <div>User</div>
+        <div>User</div>
+
+      </div>
+      <div>
+        <mat-icon><img src="../../../assets/IMAGES/resume.svg"></mat-icon>
+        <p>Profile</p>
+      </div>
+      <div (click)="setting()">
+        <mat-icon><img src="../../../assets/IMAGES/settings.svg"></mat-icon>
+        <p>Settings</p>
+        <mat-icon style="margin-left: 20px;"><img src="../../../assets/IMAGES/navigate_before-24px.svg"
+            style="color: lightgray;"></mat-icon>
+      </div>
+      <div *ngIf="extendSetting" class="extend">
+
+        <div>Settings</div>
+        <div>Settings</div>
+        <div>Settings</div>
+        <div>Settings</div>
+
+      </div>
+      <div>
+        <mat-icon><img src="../../../assets/IMAGES/logout.svg"></mat-icon>
+        <p>Logout</p>
+      </div>
+    </div>
+    <button mat-icon-button class="close-button">
+      <mat-icon (click)="drawer.toggle()&& open()"><img src="../../../assets/IMAGES/navigate_before-24px.svg">
+      </mat-icon>
+      <mat-icon (click)="drawer.toggle() && open()"><img src="../../../assets/IMAGES/navigate_next-24px.svg"></mat-icon>
+    </button>
+
+    <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p> -->
+    <!-- <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button> -->
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-button>
+      Toggle sidenav
+    </button>
+  </div>
+
+
+  <!-- </mat-drawer-container> -->
