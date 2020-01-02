@@ -16,6 +16,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {CardModule} from 'primeng/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 //accordion and accordion tab
 // import {MenuItem} from 'primeng/api';  
 @NgModule({
@@ -38,7 +39,8 @@ import {MatListModule} from '@angular/material/list';
     MatSidenavModule,
     CardModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
